@@ -146,8 +146,9 @@ pre[class*="language-"] {
   margin-top: 0;
 }
 
-p code {
-  font-size: 0.9rem;
+p code,
+q code {
+  font-size: 1rem;
   color: var(--dark-color);
   font-weight: bolder;
 }
@@ -159,6 +160,16 @@ p code {
   background-color: #49455c3f;
   margin-top: 2rem;
   margin-bottom: 2.5rem;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  font-weight: normal;
 }
 
 /* iPads (landscape) ----------- */

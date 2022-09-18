@@ -1,26 +1,10 @@
-button {
-  width: 200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 45px;
+button.btn-hover-icon {
   background-color: var(--accent-color);
   color: var(--light-color);
-  border: none;
-  border-radius: 0.25rem;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  box-shadow: 1px 1px 5px #0907145e;
+  width: 200px;
 }
 
-button:hover {
-  cursor: pointer;
-}
-
-.btn::after {
+button.btn-hover-icon::after {
   content: "";
   display: block;
   width: 0px;
@@ -31,7 +15,7 @@ button:hover {
   transition: width 200ms, margin-left 200ms;
 }
 
-.btn:is(:hover, :focus)::after {
+button.btn-hover-icon:is(:hover, :focus)::after {
   width: 24px;
   margin-left: 8px;
 }

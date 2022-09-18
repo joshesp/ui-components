@@ -1,4 +1,4 @@
-import "./normalize.css";
+import "./reset.css";
 import "./node_modules/prismjs/themes/prism-tomorrow.css";
 import "./style.css";
 

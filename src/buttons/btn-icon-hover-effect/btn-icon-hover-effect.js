@@ -50,7 +50,7 @@ export default `
               Prism.languages.html,
               "html"
             )}</pre>
-            <p>Base style</p>
+            <p>Base style.</p>
             <pre class="language-css"><code>${Prism.highlight(
               codeBtnBase,
               Prism.languages.css,

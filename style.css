@@ -1,0 +1,169 @@
+:root {
+  --primary-color: #250e4a;
+  --secondary-color: #8f7ac6;
+  --accent-color: #da70d6;
+  --light-color: #f9f8fd;
+  --dark-color: #090714;
+  --gray-color: #49455c;
+
+  font-family: "Chakra Petch", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--light-color);
+  background-color: var(--dark-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--dark-color);
+    background-color: var(--light-color);
+  }
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+}
+
+div {
+  width: 100%;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+}
+
+.ui__container,
+.ui__component {
+  display: flex;
+  flex-direction: column;
+}
+
+.ui__component {
+  padding-top: 1rem;
+  box-sizing: border-box;
+}
+
+.ui__container__components-list {
+  min-height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.ui__item {
+  width: 180px;
+  height: 60px;
+  background-color: white;
+  border-radius: 0.2rem;
+  border: solid 1px var(--gray-color);
+  color: var(--gray-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: small;
+  letter-spacing: 0.15rem;
+  transition: all ease 0.25s;
+}
+
+.ui__item:hover {
+  cursor: pointer;
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.ui__item.active {
+  border-color: var(--secondary-color);
+  color: white;
+  background-color: var(--secondary-color);
+}
+
+.ui__component__title {
+  color: var(--primary-color);
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ui__component__example {
+  box-sizing: border-box;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: var(--primary-color);
+  font-size: 0.8rem;
+}
+
+.hr {
+  width: 80%;
+  margin: 0 auto;
+  height: 1px;
+  background-color: #49455c3f;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 769px) {
+  /* Styles */
+}
+
+/* Descktop ----------- */
+@media only screen and (min-width: 1225px) {
+  .ui__container,
+  .ui__component {
+    flex-direction: row;
+  }
+
+  .ui__container__components-list {
+    min-height: fit-content;
+    width: 200px;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .ui__container__components {
+    width: calc(100% - 200px);
+  }
+
+  .ui__component__preview {
+    width: 350px;
+  }
+
+  .ui__component__code {
+    width: calc(100% - 350px);
+  }
+
+  .ui__component {
+    padding: 0 1rem;
+  }
+}

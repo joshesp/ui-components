@@ -1,0 +1,38 @@
+button.btn-bg-hover-animate {
+  background-color: transparent;
+  color: var(--accent-color);
+  box-shadow: none;
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: color 0.35s ease-out;
+}
+
+button.btn-bg-hover-animate span.material-icons {
+  color: var(--light-color);
+}
+
+button.btn-bg-hover-animate::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(calc(100% + 8px));
+  width: 45px;
+  height: 45px;
+  background-color: var(--accent-color);
+  border-radius: 50px;
+  transition: transform 0.25s 0.25s cubic-bezier(0, 0, 0.5, 2),
+    width 0.25s cubic-bezier(0, 0, 0.5, 2);
+  z-index: -1;
+}
+
+button.btn-bg-hover-animate:hover {
+  color: var(--light-color);
+  transition: color 0.35s ease-in;
+}
+
+button.btn-bg-hover-animate:hover::before {
+  width: 100%;
+  transform: translateY(-50%) translateX(0px);
+  transition: transform 0.25s cubic-bezier(0, 0, 0.5, 1),
+    width 0.25s 0.25s cubic-bezier(0, 0, 0.5, 2);
+}

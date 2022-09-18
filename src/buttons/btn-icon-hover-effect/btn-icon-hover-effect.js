@@ -1,15 +1,7 @@
 import "./btn-icon-hover-effect.css";
+import Prism from "prismjs";
 
-export default `
-    <div class="ui__component">
-        <div class="ui__component__preview">
-            <h3 class="ui__component__title">Button icon effect</h3>
-            <div class="ui__component__example">
-                <button class="btn">Get started</button>
-            </div>
-        </div>
-        <div class="ui__component__code">
-            <pre rel="css" class="language-css"><code>.btn::after {
+const codeBtnBase = `.btn::after {
     content: "";
     display: block;
     width: 0px; /* Default width */
@@ -18,11 +10,32 @@ export default `
     background-image: url("./arrow-forward.svg");  /* Svg icon */
     background-repeat: no-repeat;
     transition: width 200ms, margin-left 200ms;
-}</code></pre>
-<pre rel="css" class="language-css"><code>.btn:is(:hover, :focus)::after {
+}`;
+
+const codeBtnHover = `.btn:is(:hover, :focus)::after {
     width: 24px; /* Update width */
     margin-left: 8px; /* Space between text and icon */
-}</code></pre>
+}`;
+
+export default `
+    <div class="ui__component">
+        <div class="ui__component__preview">
+            <h3 class="ui__component__title">Button hover icon</h3>
+            <div class="ui__component__example">
+                <button class="btn">Get started</button>
+            </div>
+        </div>
+        <div class="ui__component__code">
+            <pre class="language-css"><code>${Prism.highlight(
+              codeBtnBase,
+              Prism.languages.css,
+              "css"
+            )}</code></pre>
+            <pre rel="css" class="language-css"><code>${Prism.highlight(
+              codeBtnHover,
+              Prism.languages.css,
+              "css"
+            )}</code></pre>
         </div>
     </div>
 `;

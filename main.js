@@ -1,3 +1,5 @@
+import "./normalize.css";
+import "./node_modules/prismjs/themes/prism-tomorrow.css";
 import "./style.css";
 
 import ButtonsComponent from "./src/buttons/buttons";

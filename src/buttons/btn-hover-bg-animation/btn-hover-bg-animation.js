@@ -72,7 +72,7 @@ export default `
             <div class="ui__component__example">${codeHtmlBtn}</div>
         </div>
         <div class="ui__component__code">
-            <p>Add a <code>button</code> tag and inside it add text and icon in <code>span</code> tag, in this case I use <a target="_new" href="https://fonts.google.com/icons?selected=Material+Icons">Material icons</a>.</p>
+            <p>Add a <code>button</code> tag and inside it add text and icon inside the <code>span</code> tag, in this case I use <a target="_new" href="https://fonts.google.com/icons?selected=Material+Icons">Material icons</a>.</p>
             <pre class="language-html"><code>${Prism.highlight(
               codeHtmlBtn,
               Prism.languages.html,
@@ -84,7 +84,7 @@ export default `
               Prism.languages.css,
               "css"
             )}</code></pre>
-            <p>Style to background color and transition in pseudo element <code>::before</code>.</p>
+            <p>Background and transition styling in the <code>::before</code> pseudo element.</p>
             <pre class="language-css"><code>${Prism.highlight(
               codeCssBeforeBtn,
               Prism.languages.css,
@@ -96,7 +96,7 @@ export default `
               Prism.languages.css,
               "css"
             )}</code></pre>
-            <q>If you interested to know about more <code>cubic-bezier</code> function, check the next article: <a target="_new" href="https://css-tricks.com/advanced-css-animation-using-cubic-bezier/">Using cubic-bezier()</a>.</q>
+            <q>If you are interested in learning mora about the <code>cubic-bezier</code> function, see the following article: <a target="_new" href="https://css-tricks.com/advanced-css-animation-using-cubic-bezier/">Using cubic-bezier()</a>.</q>
         </div>
     </div>
 `;

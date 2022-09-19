@@ -40,11 +40,11 @@ const codeBtnHover = `.btn-hover-icon:is(:hover, :focus)::after {
 export default `
     <div class="ui__component">
         <div class="ui__component__preview">
-            <h3 class="ui__component__title">Button hover icon</h3>
+            <h3 class="ui__component__title">Button icon hover</h3>
             <div class="ui__component__example">${btnHtml}</div>
         </div>
         <div class="ui__component__code">
-            <p>It's a simple button with class <code>btn-hover-icon</code>.</p>
+            <p>It's a simple button with the <code>btn-hover-icon</code> class.</p>
             <pre class="language-html">${Prism.highlight(
               btnHtml,
               Prism.languages.html,
@@ -56,7 +56,7 @@ export default `
               Prism.languages.css,
               "css"
             )}</code></pre>
-            <p>Style to svg icon in pseudo element <code>::after</code>.</p>
+            <p>Style the SVG icon in the <code>::after</code> pseudo element.</p>
              <pre class="language-css"><code>${Prism.highlight(
                codeBtnAfter,
                Prism.languages.css,

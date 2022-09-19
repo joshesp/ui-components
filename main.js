@@ -47,7 +47,7 @@ document.querySelectorAll(".ui__item").forEach((element) => {
 
     document.querySelector(".ui__container__components").innerHTML = `${
       component?.component ??
-      "<h4>For this moment there are not elements to show 😅, I'm working on it.</h4>"
+      "<h4>At the moment there are no elements to display 😅, I'm working on it.</h4>"
     }`;
 
     document

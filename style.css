@@ -27,6 +27,71 @@
     color: var(--dark-color);
     background-color: var(--light-color);
   }
+
+  h1,
+  .ui__component__title {
+    color: var(--primary-color);
+  }
+
+  p code,
+  q code {
+    color: var(--dark-color);
+  }
+
+  .hr {
+    background-color: #49455c3f;
+  }
+
+  .ui__item {
+    background-color: white;
+    border: solid 1px var(--primary-color);
+    color: var(--primary-color);
+  }
+
+  .ui__item:hover {
+    cursor: pointer;
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+  }
+
+  .ui__item.active {
+    border-color: var(--secondary-color);
+    color: white;
+    background-color: var(--secondary-color);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  h1,
+  .ui__component__title {
+    color: var(--light-color);
+  }
+
+  p code,
+  q code {
+    color: var(--secondary-color);
+  }
+
+  .hr {
+    background-color: #8f7ac65a;
+  }
+
+  .ui__item {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+
+  .ui__item:hover {
+    cursor: pointer;
+    border-color: var(--light-color);
+    color: var(--dark-color);
+  }
+
+  .ui__item.active {
+    border-color: var(--light-color);
+    color: var(--dark-color);
+    background-color: var(--light-color);
+  }
 }
 
 body {
@@ -47,7 +112,6 @@ div {
 }
 
 h1 {
-  color: var(--primary-color);
   text-align: center;
   margin-bottom: 3rem;
   font-size: 3rem;
@@ -77,10 +141,7 @@ h1 {
 .ui__item {
   width: 160px;
   height: 50px;
-  background-color: white;
   border-radius: 0.2rem;
-  border: solid 1px var(--primary-color);
-  color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,24 +153,11 @@ h1 {
   transition: all ease 0.25s;
 }
 
-.ui__item:hover {
-  cursor: pointer;
-  border-color: var(--secondary-color);
-  color: var(--secondary-color);
-}
-
-.ui__item.active {
-  border-color: var(--secondary-color);
-  color: white;
-  background-color: var(--secondary-color);
-}
-
 .ui__component__preview {
   margin-bottom: 1.5rem;
 }
 
 .ui__component__title {
-  color: var(--primary-color);
   width: 100%;
   text-transform: uppercase;
   font-weight: bold;
@@ -149,7 +197,6 @@ pre[class*="language-"] {
 p code,
 q code {
   font-size: 1rem;
-  color: var(--dark-color);
   font-weight: bolder;
 }
 
@@ -157,7 +204,6 @@ q code {
   width: 95%;
   margin: 0 auto;
   height: 1px;
-  background-color: #49455c3f;
   margin-top: 2rem;
   margin-bottom: 2.5rem;
 }
@@ -170,6 +216,25 @@ a {
 
 a:hover {
   font-weight: normal;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.despcription {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: 26px;
+  font-size: 1.3rem;
+}
+
+.despcription p code {
+  font-size: 1.3rem;
 }
 
 /* iPads (landscape) ----------- */

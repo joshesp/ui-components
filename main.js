@@ -26,6 +26,10 @@ const mapUIItems = () => {
 
 document.querySelector("#app").innerHTML = `
   <h1>UI components</h1>
+  <div class="despcription">
+    <p>This page contains regular UI elements for on the web such as buttons, loaders, inputs and others elements. The components are in <code>HTML, CSS</code> and a some have some <code>Javascript</code> code (basic code 😐).</p>
+    <p>I hope this components will help you in some way and I'm still working on in it 👨‍🏭, so there will be more components soon.</p>
+  </div>
   <div class="ui__container">
     <div class="ui__container__components-list">
       ${mapUIItems()}
@@ -42,7 +46,13 @@ document.querySelectorAll(".ui__item").forEach((element) => {
     );
 
     document.querySelector(".ui__container__components").innerHTML = `${
-      component?.component ?? uiElelment
+      component?.component ??
+      "<h4>For this moment there are not elements to show 😅, I'm working on it.</h4>"
     }`;
+
+    document
+      .querySelectorAll(".ui__item")
+      .forEach((e) => e.classList.remove("active"));
+    element.classList.add("active");
   });
 });

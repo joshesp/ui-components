@@ -41,7 +41,7 @@ export default `
     <div class="ui__component">
         <div class="ui__component__preview">
             <h3 class="ui__component__title">Button hover icon</h3>
-            <div class="ui__component__example">${btnHtml}</div>.
+            <div class="ui__component__example">${btnHtml}</div>
         </div>
         <div class="ui__component__code">
             <p>It's a simple button with class <code>btn-hover-icon</code>.</p>

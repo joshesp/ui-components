@@ -10,7 +10,7 @@ button.btn-hover-icon::after {
   width: 0px;
   height: 24px;
   overflow: hidden;
-  background-image: url("./arrow-forward.svg");
+  background-image: url("../arrow-forward.svg");
   background-repeat: no-repeat;
   transition: width 200ms, margin-left 200ms;
 }
